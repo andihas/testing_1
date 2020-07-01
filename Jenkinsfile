@@ -28,7 +28,7 @@ pipeline {
 
     stage('save fw') {
       steps {
-        archiveArtifacts '"main"'
+        archiveArtifacts 'main'
       }
     }
 
