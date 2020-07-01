@@ -1,15 +1,14 @@
 pipeline {
   agent {
     docker {
-      image 'debian:buster'
+      image 'FROM alpine:3.12.0'
     }
 
   }
   stages {
     stage('update') {
       steps {
-        sh 'apt update'
-        sh 'sudo apt install nano -y'
+        sh 'apk add nano'
       }
     }
 
