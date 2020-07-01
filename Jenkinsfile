@@ -7,9 +7,20 @@ pipeline {
   }
   stages {
     stage('print') {
-      steps {
-        sh 'echo "test echo"'
-        sh 'ls'
+      parallel {
+        stage('print') {
+          steps {
+            sh 'echo "test echo"'
+            sh 'ls'
+          }
+        }
+
+        stage('print1') {
+          steps {
+            echo '"test Message"'
+          }
+        }
+
       }
     }
 
