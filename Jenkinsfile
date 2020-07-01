@@ -1,14 +1,10 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename '/run/media/andi/ext4_andi/openwrt_docker_test/docker-openwrt-builder/Dockerfile'
-    }
-
-  }
+  agent none
   stages {
-    stage('update') {
+    stage('print') {
       steps {
         sh 'echo "test echo"'
+        sh 'gcc main.c -o main'
       }
     }
 
