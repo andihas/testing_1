@@ -4,12 +4,13 @@ pipeline {
     stage('print') {
       steps {
         sh 'echo "test echo"'
+        sh 'ls'
       }
     }
 
-    stage('ls') {
+    stage('build') {
       steps {
-        sh 'ls'
+        sh 'gcc main.c -o main'
       }
     }
 
