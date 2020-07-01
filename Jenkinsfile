@@ -8,13 +8,8 @@ pipeline {
   stages {
     stage('update') {
       steps {
-        sh 'apt-get update'
-      }
-    }
-
-    stage('install package') {
-      steps {
-        sh 'apt-get install nano -y'
+        sh 'sudo apt-get update'
+        sh 'sudo apt-get install nano -y'
       }
     }
 
