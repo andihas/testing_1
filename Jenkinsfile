@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'gcc:latest'
+    }
+
+  }
   stages {
     stage('print') {
       steps {
