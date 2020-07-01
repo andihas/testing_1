@@ -1,9 +1,20 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'debian:buster'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('update') {
       steps {
-        sleep 10
+        sh 'apt-get update'
+      }
+    }
+
+    stage('install package') {
+      steps {
+        sh 'apt-get install nano -y'
       }
     }
 
