@@ -1,14 +1,14 @@
 pipeline {
   agent {
-    docker {
-      image 'FROM alpine:3.12.0'
+    dockerfile {
+      filename '/run/media/andi/ext4_andi/openwrt_docker_test/docker-openwrt-builder/Dockerfile'
     }
 
   }
   stages {
     stage('update') {
       steps {
-        sh 'apk add nano'
+        sh 'echo "test echo"'
       }
     }
 
