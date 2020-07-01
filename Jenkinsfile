@@ -19,10 +19,16 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'ls'
         sh './main'
+      }
+    }
+
+    stage('save fw') {
+      steps {
+        archiveArtifacts '"main"'
       }
     }
 
