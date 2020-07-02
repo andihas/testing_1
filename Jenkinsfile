@@ -1,26 +1,15 @@
 pipeline {
   agent {
     docker {
-      image 'gcc:latest'
+      image 'openwrt_builder:latest'
     }
 
   }
   stages {
     stage('print') {
-      parallel {
-        stage('print') {
-          steps {
-            sh 'echo "test echo"'
-            sh 'ls'
-          }
-        }
-
-        stage('print1') {
-          steps {
-            echo '"test Message"'
-          }
-        }
-
+      steps {
+        sh 'echo "test echo"'
+        sh 'ls'
       }
     }
 
