@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image '127.0.0.1:5000/my_openwrt_builder'
+      image 'registry:5000/my_openwrt_builder'
     }
 
   }
