@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'openwrt_builder:latest'
+      image 'my_openwrt_builder:latest'
     }
 
   }
