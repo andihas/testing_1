@@ -8,10 +8,11 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo "testing"'
         sh 'ls'
+        sh 'pwd'
       }
     }
 
