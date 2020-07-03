@@ -2,7 +2,8 @@ pipeline {
   agent {
     dockerfile {
       filename 'Dockerfile'
-      args '-v /home/andi/git_test/test_mount:/home/user/test_mount'
+      label 'jenkins_test_wrt'
+      args '-v /home/andi/git_test/test_mount:test_mount'
     }
 
   }
