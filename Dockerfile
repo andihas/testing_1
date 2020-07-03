@@ -9,9 +9,6 @@ RUN apt-get update &&\
 
 USER user
 WORKDIR /home/user/
-#COPY 1_openwrt_install.sh .
-#COPY 2_hsm_install.sh .
-#COPY 3_make_all.sh .
 
 # set dummy git config
 RUN git config --global user.name "user" && git config --global user.email "user@example.com"
