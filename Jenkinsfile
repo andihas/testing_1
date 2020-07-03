@@ -13,7 +13,8 @@ pipeline {
         sh 'ls'
         sh 'pwd'
         sh 'cd test_mount'
-        sh 'cat  info.txt'
+        sh '''ls
+'''
       }
     }
 
