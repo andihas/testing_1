@@ -1,10 +1,9 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-      args '-v /home/andi/git_test/test_mount/:/var/jenkins_home/workspace/docker_test_master/test_mount/'
+    docker {
+        image 'my_openwrt_builder'
+        label 'lastest'
+        registryUrl 'http://127.0.0.1:5000/'
     }
-
   }
   stages {
     stage('step 1') {
