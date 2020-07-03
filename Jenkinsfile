@@ -14,7 +14,7 @@ pipeline {
         sh 'pwd'
         sh 'cd test_mount'
         sh '''ls
-'''
+test_mount/'''
       }
     }
 
