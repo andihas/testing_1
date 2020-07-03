@@ -1,33 +1,15 @@
 pipeline {
   agent {
-    docker {
-      image 'my_openwrt_builder'
+    dockerfile {
+      filename 'Dockerfile'
     }
 
   }
   stages {
-    stage('step1') {
+    stage('') {
       steps {
+        sh 'echo "testing"'
         sh 'ls'
-      }
-    }
-
-    stage('build') {
-      steps {
-        sh 'gcc main.c -o main'
-      }
-    }
-
-    stage('error') {
-      steps {
-        sh 'ls'
-        sh './main'
-      }
-    }
-
-    stage('save fw') {
-      steps {
-        archiveArtifacts 'main'
       }
     }
 
