@@ -1,10 +1,11 @@
 pipeline {
+agent {
     docker {
         image 'my_openwrt_builder'
         label 'lastest'
         registryUrl 'http://127.0.0.1:5000/'
     }
-  
+}  
   stages {
     stage('step 1') {
       steps {
