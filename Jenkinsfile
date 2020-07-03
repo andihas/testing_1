@@ -10,7 +10,7 @@ pipeline {
     stage('step 1') {
       steps {
         sh 'echo "testing"'
-        sh 'ls'
+        sh 'ls -lah'
         sh 'pwd'
         sh 'cd test_mount'
         sh 'ls test_mount'
