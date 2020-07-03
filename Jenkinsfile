@@ -1,11 +1,9 @@
 pipeline {
-agent {
-    docker {
-        image 'my_openwrt_builder'
-        registryUrl 'http://172.19.0.4:5000/'
+ agent {
+    dockerfile {
+      filename 'Dockerfile'
     }
-}  
-  stages {
+  }tages {
     stage('step 1') {
       steps {
         sh 'echo "testing"'
