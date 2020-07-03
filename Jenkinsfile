@@ -13,8 +13,8 @@ pipeline {
         sh 'ls'
         sh 'pwd'
         sh 'cd test_mount'
-        sh 'touch test_mount/blabla.txt'
         sh 'ls test_mount'
+        sh 'touch test_mount/blabla.txt'
       }
     }
 
