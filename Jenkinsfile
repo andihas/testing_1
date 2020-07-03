@@ -2,7 +2,7 @@ pipeline {
 agent {
     docker {
         image 'my_openwrt_builder'
-        registryUrl 'http://registry:5000/'
+        registryUrl 'http://172.19.0.4:5000/'
     }
 }  
   stages {
