@@ -12,7 +12,7 @@ pipeline {
         sh 'ls'
         sh 'pwd'
         sh 'ls ../'
-        sh 'cat ../test_mount/info.txt'
+        sh 'ls ../test_mount'
       }
     }
 
