@@ -2,7 +2,6 @@ pipeline {
   agent {
     dockerfile {
       filename 'Dockerfile'
-
     }
 
   }
@@ -12,7 +11,9 @@ pipeline {
         sh 'echo "testing"'
         sh 'ls'
         sh 'pwd'
+        sh 'ls ../'
       }
     }
+
   }
 }
