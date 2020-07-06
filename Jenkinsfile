@@ -12,7 +12,7 @@ pipeline {
         sh 'echo "testing"'
         sh 'ls'
         sh 'pwd'
-        sh 'ls /wrt_mount'
+        sh 'ls wrt_mount'
       }
     }
 
