@@ -2,7 +2,7 @@ pipeline {
   agent {
     dockerfile {
       filename 'Dockerfile'
-      args '-v /var/jenkins_home/workspace/test_mount:/root/test_mount'
+      args '-v /home/wrt_build:/home/wrt_mount'
     }
 
   }
@@ -12,8 +12,7 @@ pipeline {
         sh 'echo "testing"'
         sh 'ls'
         sh 'pwd'
-        sh 'ls ../'
-        sh 'ls ../test_mount'
+        sh 'ls /home/wrt_mount'
       }
     }
 
