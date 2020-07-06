@@ -10,9 +10,9 @@ pipeline {
     stage('error') {
       steps {
         sh 'echo "testing"'
-        sh 'ls'
+        sh 'ls -lah'
         sh 'pwd'
-        sh 'ls wrt_mount'
+        sh 'ls -lah wrt_mount'
       }
     }
 
